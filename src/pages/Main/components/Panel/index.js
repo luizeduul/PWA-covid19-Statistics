@@ -12,6 +12,7 @@ import { ItemStyled, CardPanelContentStyled } from "../styles";
 const handleNavigatorHasShare = navigator.share;
 
 function Panel({ updatedAt, onChange, data, country, getInfoCovid }) {
+  // eslint-disable-next-line no-unused-vars
   const { cases, recovered, deaths, todayCases, todayDeaths } = data;
 
   const renderCountries = (country, index) => (
