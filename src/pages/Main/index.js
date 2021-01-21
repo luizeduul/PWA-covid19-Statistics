@@ -17,7 +17,7 @@ function Main() {
       .catch((err) => {
         console.error(err);
       });
-  });
+  }, []);
 
   useEffect(() => {
     getDataCovid(country)
