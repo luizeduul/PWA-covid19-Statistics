@@ -3,7 +3,10 @@ import api from "../../services/api";
 import Board from "./components/Board";
 import Panel from "./components/Panel";
 
-import { ContainerStyled } from "./styles";
+import imglogo from "../../assets/images/logo-covid.png";
+
+import { ContainerStyled, ImageLogo, LogoContainer, TextApp } from "./styles";
+import Footer from "./components/Footer/index";
 
 function Main() {
   const [data, setData] = useState({});
@@ -20,7 +23,7 @@ function Main() {
   }, []);
 
   useEffect(() => {
-    getDataCovid(country)
+    getDataCovid(country);
   }, [getDataCovid, country]);
 
   const handleChangeSelect = ({ target }) => {
@@ -28,18 +31,25 @@ function Main() {
     setCountry(country);
   };
   return (
-    <ContainerStyled>
-      <div className="ab.2">
-        <Panel
-          data={data}
-          updatedAt={updatedAt}
-          onChange={handleChangeSelect}
-          country={country}
-          getInfoCovid={getDataCovid}
-        />
-      </div>
-      <Board data={data} />
-    </ContainerStyled>
+    <>
+      <ContainerStyled>
+        <LogoContainer>
+          <ImageLogo src={imglogo} alt="logo" />
+          <TextApp>Covid Statistics</TextApp>
+        </LogoContainer>
+        <div className="ab.2">
+          <Panel
+            data={data}
+            updatedAt={updatedAt}
+            onChange={handleChangeSelect}
+            country={country}
+            getInfoCovid={getDataCovid}
+          />
+        </div>
+        <Board data={data} />
+      </ContainerStyled>
+      <Footer />
+    </>
   );
 }
 

@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import CovidImg from "../../assets/images/covid.jpg";
+import CovidImg from "../../assets/images/covid19.png";
 
 const globalStyle = createGlobalStyle`
   * {
@@ -29,8 +29,19 @@ const globalStyle = createGlobalStyle`
     margin-bottom: 16px;
   }
 
+  .mb-1{
+    margin-bottom: 30px;
+  }
   .pt-2 {
     padding-top: 16px;
+  }
+
+  .pl-2{
+    padding-left: 30px;
+  }
+
+  .pr-2{
+    padding-right: 30px;
   }
 
   .cursor {

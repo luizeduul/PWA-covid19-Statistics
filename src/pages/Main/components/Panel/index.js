@@ -7,7 +7,11 @@ import {
   MenuItem,
 } from "../../../../components";
 import COUNTRIES from "../../../../commons/constants/countries";
-import { ItemStyled, CardPanelContentStyled } from "../styles";
+import {
+  ItemStyled,
+  CardPanelContentStyled,
+  ContainerDescriptionPanel,
+} from "../styles";
 
 const handleNavigatorHasShare = navigator.share;
 
@@ -24,18 +28,20 @@ function Panel({ updatedAt, onChange, data, country, getInfoCovid }) {
     </MenuItem>
   );
 
-  const textCovid19 = `País: ${country} - recuperados: ${recovered}`;
+  const textCovid19 = 
+          `País: ${country} - total de casos: ${cases} , 
+          total de óbitos: ${deaths} recuperados: ${recovered}`;
 
   const copyInfo = () => {
-    navigator.clipboard.writeText(textCovid19)
-  }
+    navigator.clipboard.writeText(textCovid19);
+  };
   const shareInfo = () => {
     navigator.share({
       title: `Dados da covid 19 - ${country}`,
       text: textCovid19,
-      url: `https://covidferinhas.com.br`
-    })
-  }
+      url: `https://faicovidstatistcs.netlify.app/`,
+    });
+  };
 
   const renderShareButton = (
     <div>
@@ -43,7 +49,7 @@ function Panel({ updatedAt, onChange, data, country, getInfoCovid }) {
         Compartilhar
       </Button>
     </div>
-  )
+  );
 
   const renderCopyButton = (
     <div>
@@ -51,28 +57,27 @@ function Panel({ updatedAt, onChange, data, country, getInfoCovid }) {
         Copiar
       </Button>
     </div>
-  )
-  
+  );
+
   return (
-    <Card>
+    <Card className="mb-1">
       <CardPanelContentStyled>
         <div>
-          <Typography variant="h5" component="span" color="primary">
-            Covid Statistics
-          </Typography>
-          <Typography variant="h6" component="span" color="primary">
-            Painel coronavirus
-          </Typography>
-          <Typography variant="body2" component="span" color="primary">
-            Atualizado em : {updatedAt}
-          </Typography>
+          <ContainerDescriptionPanel>
+            <Typography variant="h5" component="h5">
+              Painel Covid-19
+            </Typography>
+            <Typography variant="body2" component="span">
+              Atualizado em : {updatedAt}
+            </Typography>
+          </ContainerDescriptionPanel>
           <div className="pt-2">
             <Select onChange={onChange} value={country}>
               {COUNTRIES.map(renderCountries)}
             </Select>
           </div>
         </div>
-        {handleNavigatorHasShare ? renderShareButton : renderCopyButton }
+        {handleNavigatorHasShare ? renderShareButton : renderCopyButton}
       </CardPanelContentStyled>
     </Card>
   );
