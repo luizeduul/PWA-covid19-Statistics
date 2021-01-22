@@ -8,7 +8,7 @@
  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 
-<p>Desenvolvido com a ideia da aula  do <a href="https://www.linkedin.com/in/carneirobruno/" target="_blank" rel="noopener noreferrer nofollow">Bruno Carneiro</a> na  da Digital Innovation One sobre a criação de PWA utilizando dados de uma API de estatísticas da covid 19.  
+<p>Desenvolvido com a ideia da aula  do <a href="https://www.linkedin.com/in/carneirobruno/" target="_blank" rel="noopener noreferrer nofollow">Bruno Carneiro</a> na Digital Innovation One sobre a criação de PWA utilizando dados de uma API de estatísticas da covid 19.  
   
 </p>
 
