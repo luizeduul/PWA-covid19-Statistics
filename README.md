@@ -1,5 +1,5 @@
 <h1 align="center">
-  PWA covid 19
+  PWA Covid 19
 </h1>
 
 <p align="center">
@@ -8,7 +8,9 @@
  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 
-<p>Projeto desenvolvido... </p>
+<p>Desenvolvido com a ideia da aula  do <a href="https://www.linkedin.com/in/carneirobruno/" target="_blank" rel="noopener noreferrer nofollow">Bruno Carneiro</a> na  da Digital Innovation One sobre a criação de PWA utilizando dados de uma API de estatísticas da covid 19.  
+  
+</p>
 
 ## Índice
 - [Descrição](#descrição)
@@ -17,13 +19,14 @@
 - [Tecnologias Utilizadas](#tecnologias)
 
 ## Descrição
-<p>Comming soon</p>
-
+<p>A intenção é exibir algumas estatísticas da covid 19 no mundo e em alguns países. Além dos que tinha na aula incluí mais alguns países.</p>
+<p>Projeto será atualizado no futuro</p>
 ---
 
 ## Como utilizar 
 <p>Faça um clone desse projeto em sua máquina</p><br>
-
+<p>Primeiramente faça a instalação das dependencias do projeto</p>
+<p>Faça a instalação das dependencias do projeto. Com o comando: <strong>yarn install</strong> ou <strong>npm install</strong>.</p>
 ---
 
 ## Previews do projeto
