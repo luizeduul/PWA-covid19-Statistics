@@ -21,6 +21,7 @@
 ## Descrição
 <p>A intenção é exibir algumas estatísticas da covid 19 no mundo e em alguns países. Além dos que tinha na aula incluí mais alguns países.</p>
 <p>Projeto será atualizado no futuro</p>
+<p>Se for contribuir faça uma branch e faça um pull request</p>
 ---
 
 ## Como utilizar 
